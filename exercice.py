@@ -4,13 +4,21 @@
 import random
 
 def get_first_part_of_name(name):
-	return ""
+	PremierPrénom = name[:name.find("-")]
+	return PremierPrénom.title()
 
 def get_random_sentence(animals, adjectives, fruits):
-	return ""
+	return f"Aujourd’hui,j’ai vu un {animals[random.randrange(0, len(animals)-1)]} s’emparer d’un panier {adjectives[random.randrange(0, len(adjectives)-1)]} plein de {fruits[random.randrange(0, len(fruits)-1)]}"
 
 def encrypt(text, shift):
-	return ""
+	new_text = []
+	for letter in text.upper():
+		if letter.isalpha():
+			new_text.append(chr((ord(letter) % 90) + 65))
+		else :
+			new_text.append(letter)
+
+	return new_text
 
 def decrypt(encrypted_text, shift):
 	return ""
